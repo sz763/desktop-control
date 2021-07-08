@@ -17,8 +17,9 @@ public abstract class AbstractJsonEvent<T> implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) {
         try {
-            log.debug("Received request from: {}", exchange.getRemoteAddress());
+            log.debug("Received request from: {}", exchange.getRequestURI());
             T event = MAPPER.readValue(exchange.getRequestBody(), getTypeRef());
+            log.debug("Event: {}", event);
             handle(event);
             doResponse(exchange);
         } catch (Exception e) {

@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
     <meta charset="UTF-8">
     <title>desktop-control</title>
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="./app.js" type="module"></script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="mouse-move" id="mouse-move-area"></div>
-        <div class="mouse-click">
-            <button id="left-mouse-btn">Left</button>
-            <button id="right-mouse-btn">Right</button>
+    <div class="center w-100 h-100 mw-700">
+        <div class="w-100 bg-light h-100" id="mouse-move-area" ></div>
+        <div class="center mw-700 w-100 bg-white">
+            <div class="center mw-700 col-md-12 fixed-bottom mb-2">
+                <div class="btn-group pt-1 pb-1 w-100">
+                    <button class="btn btn-secondary w-50" id="left-mouse-btn">Left</button>
+                    <span class="btn-outline-info">&nbsp;</span>
+                    <button class="btn btn-secondary w-50" id="right-mouse-btn">Right</button>
+                </div>
+                <div class="w-100 input-group">
+                    <input id="keyboard-area" class="form-control form-control-sm" value="" placeholder="Write text and press enter"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-warning btn-sm" id="back-space">&lt;- bkspc</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="keyboard">
-            <input id="keyboard-area" value="" />
-        </div>        
     </div>
 </body>
-<script src="./app.js" type="module"></script>
+
 </html>

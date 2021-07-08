@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class KeyboardEvent implements DesktopEvent{
-    private char key;
+    private String txt;
 }

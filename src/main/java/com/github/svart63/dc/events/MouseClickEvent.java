@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class MouseClickEvent implements DesktopEvent {
-    private MouseButton mouseButton;
+    private MouseButton mbtn;
 }
