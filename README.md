@@ -5,7 +5,7 @@ Application for controlling desktop i.g.:
 1. Send text code
 1. Send backspace
 
-Currently I use it for controlling my raspberry pi desktop from my phone.
+Currently I use it for control my raspberry pi desktop from my phone.
 How to achive it:
 1. Build jar `mvn clean package`
 1. Upload `jar` file with `web` directory to remote host
@@ -14,6 +14,6 @@ How to achive it:
 1. Enjoy
 
 
-If have a question `Why? There are a lot of tools with same and more functionality?`
+If you have a question `Why? There are a lot of tools with same and more functionality?`
 
 The answer is: because I can :)
